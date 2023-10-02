@@ -12,3 +12,7 @@ pip install chainlit
 touch app.py
 
 chainlit run app.py
+
+open-interpreter
+
+>> Ok, let's go!
