@@ -17,6 +17,6 @@ map:
   - share:rw
   - ssl
 options:
-  message: "Hello world..."
+  message: "OPENAI_API_KEY"
 schema:
   message: "str?"
