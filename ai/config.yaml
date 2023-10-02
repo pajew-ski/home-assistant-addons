@@ -23,4 +23,3 @@ schema:
   message: "str?"
 ingress: true
 ingress_port: 1234
-webui: https://homeassistant.local:1234/
