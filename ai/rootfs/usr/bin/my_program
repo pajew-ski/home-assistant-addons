@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "All done!" > /share/ai_addon_output.txt.new
-
 echo "All done!"
 
 ping localhost

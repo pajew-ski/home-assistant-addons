@@ -15,4 +15,4 @@ chainlit run app.py
 
 open-interpreter
 
->> Ok, let's go!
+#>> Ok, let's go!
