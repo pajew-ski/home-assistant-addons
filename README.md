@@ -8,7 +8,7 @@ Add-on documentation: https://x.com/m_pajew_ski
 
 This repository contains the following add-ons
 
-### [ai add-on](./ai)
+### [AI Add-on](./ai)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
@@ -66,7 +66,7 @@ This repository contains the following add-ons
 
     Manifestation requires a balance of energies
 
-## pps:
+## \*pps:
 
     🖖
 
