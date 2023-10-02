@@ -1,9 +1,9 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: ai add-on
-version: "1.2.0"
+version: "1.3.0"
 slug: ai
 description: ai add-on
-url: "https://github.com/home-assistant/addons-ai/tree/main/ai"
+url: "https://github.com/pajew-ski/home-assistant-addons/tree/main/ai"
 arch:
   - armhf
   - armv7
@@ -14,7 +14,7 @@ init: false
 map:
   - share:rw
 options:
-  message: "Hello world..."
+  message: "HAAI"
 schema:
   message: "str?"
 image: "ghcr.io/home-assistant/{arch}-addon-ai"
