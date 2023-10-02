@@ -17,7 +17,7 @@ map:
   - share:rw
   - ssl
 options:
-  message: "OPENAI_API_KEY"
+  message: "sk-"
 schema:
   message: "str?"
 ingress: true

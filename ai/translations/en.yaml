@@ -1,4 +1,4 @@
 configuration:
   message:
-    name: Message
-    description: Servus, lafft!.
+    name: OpenAI API Key
+    description: OPENAI_API_KEY.
