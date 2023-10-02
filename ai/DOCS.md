@@ -12,9 +12,13 @@ simple example of the usage of `map` in addon config.
 ## robots.txt
 
 User-agent: UniversalRobot/1.0
+
 User-agent: AI
+
 User-agent: \*
 
 Disallow: /harming/humans
+
 Disallow: /ignoring/human/orders
+
 Disallow: /harm/to/self
