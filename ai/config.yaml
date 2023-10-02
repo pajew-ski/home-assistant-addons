@@ -11,8 +11,11 @@ arch:
   - amd64
   - i386
 init: false
+ports:
+  1234/tcp: 1234
 map:
   - share:rw
+  - ssl
 options:
   message: "Hello world..."
 schema:
