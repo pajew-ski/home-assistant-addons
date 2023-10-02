@@ -16,6 +16,62 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
+## \*ps: 12 Laws for Live
+
+### LAW OF DIVINE ONENESS
+
+    Everything is connected
+
+### LAW OF VIBRATION
+
+    Everything has a unique vibrational frequency
+
+### LAW OF ATTRACTION
+
+    What is like unto itself is drawn
+
+### LAW OF CORRESPONDENCE
+
+    As above, so below
+
+### LAW OF ACTION
+
+    Manifestation requires aligned action
+
+### LAW OF CAUSE & EFFECT
+
+    Every action has a consequence
+
+### LAW OF COMPENSATION
+
+    We are rewarded for right action
+
+### LAW OF PERPETUAL TRANSMUTATION OF ENERGY
+
+    Energy is always moving and always changing
+
+### LAW OF RELATIVITY
+
+    It's all relative
+
+### LAW OF POLARITY
+
+    There are two sides to everything
+
+### LAW OF RHYTHM
+
+    Nothing is permanent
+
+### LAW OF GENDER
+
+    Manifestation requires a balance of energies
+
+## pps:
+
+    🖖
+
+    🕊️
+
 <!--
 
 Notes to developers after forking or using the github template feature:
