@@ -23,4 +23,4 @@ schema:
   message: "str?"
 ingress: true
 ingress_port: 1234
-webui: [PROTO:option_name]://[HOST]:[PORT:2839]/dashboard
+webui: https://homeassistant.local:1234/
