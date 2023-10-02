@@ -27,4 +27,4 @@ configuration:
     name: Enable SSL
     description: Enable usage of SSL on the webserver inside the add-on
 network:
-  80/TCP: The webserver port (Not used for Ingress)
+  1234/TCP: The webserver port (Not used for Ingress)
