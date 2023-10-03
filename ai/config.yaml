@@ -2,7 +2,7 @@
 name: "AI"
 version: "1.2.0"
 slug: "ai"
-description: "AI Add-on for Home Assistant"
+description: "Chainlit for Home Assistant"
 url: "https://x.com/m_pajew_ski"
 arch:
   - armhf
