@@ -1,6 +1,6 @@
 # Home Assistant Add-on: AI Add-on for Home Assistant
 
-_AI Add-on for Home Assistant to use as a blueprint for new add-ons._
+Chainlit for Home Assistant
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
