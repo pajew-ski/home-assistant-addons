@@ -1,9 +1,8 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: "AI Add-on"
-description: "Chainlit in Home Assistant"
-version: "1.3.0"
-slug: "ai"
-init: true
+name: "Hello world"
+description: "My first real add-on!"
+version: "1.1.0"
+slug: "hello_world"
+init: false
 arch:
   - aarch64
   - amd64
@@ -13,19 +12,3 @@ arch:
 startup: services
 ports:
   9000/tcp: 9000
-url: "https://github.com/pajew-ski/home-assistant-addons/tree/main/ai"
-map:
-  - share:rw
-  - ssl
-options:
-  message: "sk-"
-schema:
-  message: "str?"
-ingress: true
-ingress_port: 9000
-configuration:
-  ssl:
-    name: Enable SSL
-    description: Enable usage of SSL on the webserver inside the add-on
-network:
-  9000/TCP: The webserver port (Not used for Ingress)
