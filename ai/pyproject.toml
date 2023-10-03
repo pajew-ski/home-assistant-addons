@@ -6,6 +6,8 @@ authors = ["Michael Pajewski <m@pajew.ski>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+chainlit
+
 # andere Abhängigkeiten hier...
 
 [build-system]
