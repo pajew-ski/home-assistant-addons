@@ -4,4 +4,6 @@ echo "All done!" > /share/example_addon_output_ready.txt
 
 pip install chainlit
 
+chainlit run app.py -w
+
 python3 -m http.server 8099
