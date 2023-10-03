@@ -18,5 +18,4 @@ options:
 schema:
   message: "str?"
 image: "ghcr.io/home-assistant/{arch}-addon-example"
-ports:
-  9000/tcp: 9000
+ingress: true
