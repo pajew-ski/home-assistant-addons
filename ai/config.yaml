@@ -12,7 +12,7 @@ arch:
   - i386
 startup: services
 ports:
-  8080/tcp: 8080
+  9999/tcp: 9999
 url: "https://github.com/pajew-ski/home-assistant-addons/tree/main/ai"
 map:
   - share:rw
@@ -22,10 +22,10 @@ options:
 schema:
   message: "str?"
 ingress: true
-ingress_port: 8080
+ingress_port: 9999
 configuration:
   ssl:
     name: Enable SSL
     description: Enable usage of SSL on the webserver inside the add-on
 network:
-  8080/TCP: The webserver port (Not used for Ingress)
+  9999/TCP: The webserver port (Not used for Ingress)
