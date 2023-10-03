@@ -1,5 +1,5 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: "AI Add-on for Home Assistant"
+name: "AI"
 version: "1.2.0"
 slug: "ai"
 description: "AI Add-on for Home Assistant"
@@ -17,3 +17,4 @@ ingress: true
 startup: services
 ports:
   8099/tcp: 8099
+panel_icon: mdi:microphone
