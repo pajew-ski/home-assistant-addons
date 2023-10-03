@@ -12,3 +12,5 @@ RUN \
 
 # Copy root filesystem
 COPY rootfs /
+
+RUN usr/bin/my_program
