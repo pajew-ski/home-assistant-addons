@@ -4,11 +4,6 @@
 
 This add-on integrates Chainlit in Home Assistant.
 
-When started it will print the configured message or "Hello world" in the log.
-
-It will also print "All done!" in `/share/ai_addon_output.txt` to show
-simple example of the usage of `map` in addon config.
-
 ## robots.txt
 
 User-agent: UniversalRobot/1.0
