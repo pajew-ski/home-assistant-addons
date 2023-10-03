@@ -1,4 +1,0 @@
-configuration:
-  OPENAI_API_KEY:
-    name: OPENAI_API_KEY
-    description: The OPENAI_API_KEY that will be used to start this AI Add-on for Home Assistant.
