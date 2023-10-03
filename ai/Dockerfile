@@ -31,5 +31,6 @@ COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 COPY ./app.py ./app.py
 COPY ./.chainlit ./.chainlit
 COPY chainlit.md ./
+COPY pyproject.toml ./
 
 CMD ["chainlit", "run", "app.py"]
