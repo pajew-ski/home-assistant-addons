@@ -1,8 +1,8 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: AI Add-on for Home Assistant
+name: "AI Add-on for Home Assistant"
 version: "1.2.0"
-slug: ai
-description: AI Add-on for Home Assistant
+slug: "ai"
+description: "AI Add-on for Home Assistant"
 url: "https://x.com/m_pajew_ski"
 arch:
   - armhf
@@ -13,9 +13,7 @@ arch:
 init: false
 map:
   - share:rw
-options:
-  OPENAI_API_KEY: "OPENAI_API_KEY"
-schema:
-  OPENAI_API_KEY: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-example"
 ingress: true
+startup: services
+ports:
+  8099/tcp: 8099
