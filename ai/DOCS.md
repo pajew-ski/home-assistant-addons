@@ -1,19 +1,10 @@
-# Home Assistant Add-on: AI
+# Home Assistant Add-on: Example add-on
 
 ## How to use
 
-This add-on integrates Chainlit in Home Assistant.
+This add-on really does nothing. It is just an example.
 
-## robots.txt
+When started it will print the configured message or "Hello world" in the log.
 
-User-agent: UniversalRobot/1.0
-
-User-agent: AI
-
-User-agent: \*
-
-Disallow: /harming/humans
-
-Disallow: /ignoring/human/orders
-
-Disallow: /harm/to/self
+It will also print "All done!" in `/share/example_addon_output.txt` to show
+simple example of the usage of `map` in addon config.
