@@ -1,20 +1,35 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+# The builder image, used to build the virtual environment
+FROM python:3.11-slim-buster as builder
 
-# Install requirements for add-on
-RUN \
-    apk add --no-cache \
-    python3 && \
-    py3-pip && \
-    pip install streamlit
+RUN apt-get update && apt-get install -y git
 
-# Python 3 HTTP Server serves the current working dir
-# So let's set it to our add-on persistent data directory.
-WORKDIR /data
+RUN pip install poetry==1.4.2
 
-# Copy data for add-on
-COPY run.sh /
-COPY app.py /
-RUN chmod a+x /run.sh
+ENV POETRY_NO_INTERACTION=1 \
+    POETRY_VIRTUALENVS_IN_PROJECT=1 \
+    POETRY_VIRTUALENVS_CREATE=1 \
+    POETRY_CACHE_DIR=/tmp/poetry_cache
 
-CMD [ "/run.sh" ]
+ENV HOST=0.0.0.0
+ENV LISTEN_PORT 8000
+EXPOSE 8000
+
+WORKDIR /app
+
+COPY pyproject.toml poetry.lock ./
+
+RUN poetry install --without dev --no-root && rm -rf $POETRY_CACHE_DIR
+
+# The runtime image, used to just run the code provided its virtual environment
+FROM python:3.11-slim-buster as runtime
+
+ENV VIRTUAL_ENV=/app/.venv \
+    PATH="/app/.venv/bin:$PATH"
+
+COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
+
+COPY ./demo_app ./demo_app
+COPY ./.chainlit ./.chainlit
+COPY chainlit.md ./
+
+CMD ["chainlit", "run", "app.py"]
