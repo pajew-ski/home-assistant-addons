@@ -7,13 +7,13 @@
 # Add your code here
 
 # Declare variables
-declare message
+declare OPENAI_API_KEY
 
-## Get the 'message' key from the user config options.
-message=$(bashio::config 'message')
+## Get the 'OPENAI_API_KEY' key from the user config options.
+OPENAI_API_KEY=$(bashio::config 'OPENAI_API_KEY')
 
-## Print the message the user supplied, defaults to "Hello World..."
-bashio::log.info "${message:="Hello World..."}"
+## Print the OPENAI_API_KEY the user supplied, defaults to "Hello World..."
+bashio::log.info "${OPENAI_API_KEY:="sk-"}"
 
 ## Run your program
 exec /usr/bin/my_program

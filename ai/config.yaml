@@ -14,8 +14,8 @@ init: false
 map:
   - share:rw
 options:
-  message: "OPENAI_API_KEY"
+  OPENAI_API_KEY: "OPENAI_API_KEY"
 schema:
-  message: "str?"
+  OPENAI_API_KEY: "str?"
 image: "ghcr.io/home-assistant/{arch}-addon-example"
 ingress: true
