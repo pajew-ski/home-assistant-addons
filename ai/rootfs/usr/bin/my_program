@@ -1,7 +1,3 @@
-#!/bin/bash
+#!/usr/bin/with-contenv bashio
 
-echo "All done!"
-
-ping localhost
-
-echo "auch done"
+echo "Hello world!"
