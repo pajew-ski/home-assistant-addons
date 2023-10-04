@@ -1,5 +1,5 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: "Alpha new"
+name: "Alpha"
 version: "1.0.0"
 slug: "ai"
 description: "Chainlit for Home Assistant"
