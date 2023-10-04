@@ -1,5 +1,5 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: "Alpha"
+name: "Alpha new"
 version: "1.0.0"
 slug: "ai"
 description: "Chainlit for Home Assistant"
@@ -16,5 +16,5 @@ map:
 ingress: true
 startup: services
 ports:
-  8099/tcp: 8099
+  8199/tcp: 8199
 panel_icon: mdi:microphone
