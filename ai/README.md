@@ -58,7 +58,7 @@ To generate Image with `DOCKER_BUILDKIT`, follow below command
 
 1. Run the docker container directly
 
-`docker run -d --name pandasai-chainlit-chat-app -p 8099:8099 pandasai-chainlit-chat-app `
+`docker run -d --name pandasai-chainlit-chat-app -p 8000:8000 pandasai-chainlit-chat-app `
 
 2. Run the docker container using docker-compose (Recommended)
 
