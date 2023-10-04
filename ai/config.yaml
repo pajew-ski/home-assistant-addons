@@ -16,5 +16,5 @@ map:
 ingress: true
 startup: services
 ports:
-  8199/tcp: 8199
+  8099/tcp: 8099
 panel_icon: mdi:microphone

@@ -4,7 +4,6 @@
 
 ![UI](ui.PNG?raw=true)
 
-
 ## 🔧 Features
 
 - Basic Skeleton App configured with `openai` API
@@ -18,9 +17,9 @@
 This repo contains an `main.py` file which has a template for a chatbot talking to CSV implementation.
 
 ## Adding your chain
+
 To add your chain, you need to change the `load_chain` function in `main.py`.
 Depending on the type of your chain, you may also need to change the inputs/outputs that occur later on.
-
 
 ## 💻 Running Locally
 
@@ -43,31 +42,30 @@ poetry shell
 chainlit run demo_app/main.py
 ```
 
-Run App using Docker
---------------------
+## Run App using Docker
+
 This project includes `Dockerfile` to run the app in Docker container. In order to optimise the Docker Image
-size and building time with cache techniques, I have follow tricks in below Article 
+size and building time with cache techniques, I have follow tricks in below Article
 https://medium.com/@albertazzir/blazing-fast-python-docker-builds-with-poetry-a78a66f5aed0
 
 Build the docker container
 
-``docker  build . -t pandasai-chainlit-chat-app:latest``
+`docker  build . -t pandasai-chainlit-chat-app:latest`
 
 To generate Image with `DOCKER_BUILDKIT`, follow below command
 
-```DOCKER_BUILDKIT=1 docker build --target=runtime . -t pandasai-chainlit-chat-app:latest```
+`DOCKER_BUILDKIT=1 docker build --target=runtime . -t pandasai-chainlit-chat-app:latest`
 
-1. Run the docker container directly 
+1. Run the docker container directly
 
-``docker run -d --name pandasai-chainlit-chat-app -p 8000:8000 pandasai-chainlit-chat-app ``
+`docker run -d --name pandasai-chainlit-chat-app -p 8099:8099 pandasai-chainlit-chat-app `
 
 2. Run the docker container using docker-compose (Recommended)
 
-``docker-compose up``
+`docker-compose up`
 
+## Deploy App on Google App Engine
 
-Deploy App on Google App Engine
---------------------------------
 This app can be deployed on Google App Engine following below steps.
 
 ## Prerequisites
@@ -75,7 +73,7 @@ This app can be deployed on Google App Engine following below steps.
 Follow below guide on basic Instructions.
 [How to deploy Streamlit apps to Google App Engine](https://dev.to/whitphx/how-to-deploy-streamlit-apps-to-google-app-engine-407o)
 
-We added below tow configurations files 
+We added below tow configurations files
 
 1. `app.yaml`: A Configuration file for `gcloud`
 2. `.gcloudignore` : Configure the file to ignore file / folders to be uploaded
@@ -84,19 +82,18 @@ I have adopted `Dockerfile` to deploy the app on GCP APP Engine.
 
 1. Initialise & Configure the App
 
-``gcloud app create --project=[YOUR_PROJECT_ID]``
+`gcloud app create --project=[YOUR_PROJECT_ID]`
 
 2. Deploy the App using
 
-``gcloud app deploy``
+`gcloud app deploy`
 
-3. Access the App using 
+3. Access the App using
 
 https://pandasai-chat-app-dpy4wfgkcq-ts.a.run.app/
 
+## Deploy App on Google Cloud using Cloud Run (RECOMMENDED)
 
-Deploy App on Google Cloud using Cloud Run (RECOMMENDED)
---------------------------------------------------------
 This app can be deployed on Google Cloud using Cloud Run following below steps.
 
 ## Prerequisites
@@ -104,7 +101,7 @@ This app can be deployed on Google Cloud using Cloud Run following below steps.
 Follow below guide on basic Instructions.
 [How to deploy Streamlit apps to Google App Engine](https://dev.to/whitphx/how-to-deploy-streamlit-apps-to-google-app-engine-407o)
 
-We added below tow configurations files 
+We added below tow configurations files
 
 1. `cloudbuild.yaml`: A Configuration file for `gcloud`
 2. `.gcloudignore` : Configure the file to ignore file / folders to be uploaded
@@ -122,7 +119,6 @@ or set the project
 Set the Region if not done before
 
 `gcloud config set compute/region australia-southeast1`
-
 
 2. Enable Services for the Project
 
@@ -148,7 +144,7 @@ gcloud projects add-iam-policy-binding pandasai-app \
 gcloud projects add-iam-policy-binding pandasai-app \
     --member="serviceAccount:pandasai-app-cr@pandasai-app.iam.gserviceaccount.com" \
     --role="roles/run.admin"
-``` 
+```
 
 4. Generate the Docker
 
@@ -166,17 +162,15 @@ gcloud artifacts repositories create pai-app \
     --async
 ```
 
-Configure-docker 
+Configure-docker
 
 `gcloud auth configure-docker australia-southeast1-docker.pkg.dev`
 
-In order to push the `docker-image` to Artifact registry, first create app in the region of choice. 
+In order to push the `docker-image` to Artifact registry, first create app in the region of choice.
 
 Check the artifacts locations
 
 `gcloud artifacts locations list`
-
-
 
 Once ready, let us push the image to location
 
@@ -190,19 +184,18 @@ Once image is pushed to Google Cloud Artifacts Registry. Let us deploy the image
 gcloud run deploy pandasai-chat-app --image=australia-southeast1-docker.pkg.dev/pandasai-app/pai-app/pandasai-chainlit-chat-app:latest \
     --region=australia-southeast1 \
     --service-account=pandasai-app-cr@pandasai-app.iam.gserviceaccount.com \
-    --port=8000
+    --port=OPENAI_API_KEY
 ```
 
 7. Test the App Yourself
 
-You can try the app using below link 
+You can try the app using below link
 
 https://pandasai-chat-app-dpy4wfgkcq-ts.a.run.app/
 
-
 ## Report Feedbacks
 
-As `pandasai-chainlit-docker-deployment-template` is a template project with minimal example. Report issues if you face any. 
+As `pandasai-chainlit-docker-deployment-template` is a template project with minimal example. Report issues if you face any.
 
 ## DISCLAIMER
 
