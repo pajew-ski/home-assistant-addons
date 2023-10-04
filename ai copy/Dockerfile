@@ -11,8 +11,8 @@ ENV POETRY_NO_INTERACTION=1 \
     POETRY_CACHE_DIR=/tmp/poetry_cache
 
 ENV HOST=0.0.0.0
-ENV LISTEN_PORT 8000
-EXPOSE 8000
+ENV LISTEN_PORT 8099
+EXPOSE 8099
 
 WORKDIR /app
 
@@ -28,8 +28,9 @@ ENV VIRTUAL_ENV=/app/.venv \
 
 COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
-COPY ./demo_app ./demo_app
+COPY ./app.py ./app.py
 COPY ./.chainlit ./.chainlit
 COPY chainlit.md ./
+COPY pyproject.toml ./
 
-CMD ["chainlit", "run", "demo_app/main.py"]
+CMD ["chainlit", "run", "app.py"]

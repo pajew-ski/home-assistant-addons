@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "Alpha"
+version = "0.1.0"
+description = "Chainlit for Home Assistant"
+authors = ["Michael Pajewski <m@pajew.ski>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+chainlit
+
+# andere Abhängigkeiten hier...
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
